@@ -1,2 +1,2 @@
-# EasyWrite
+# EasyWriteWhiteBoard
 一个正在开发中的，专为大型触摸屏幕或电子白板教学而制作的手写批注程序
