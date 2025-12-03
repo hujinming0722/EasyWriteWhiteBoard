@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1920</width>
+    <height>1080</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+   </layout>
+  </widget>
+  <widget class="QPushButton" name="clearBtn">
+   <property name="geometry">
+    <rect>
+     <x>910</x>
+     <y>1000</y>
+     <width>100</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>100</width>
+     <height>50</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: rgba(60, 60, 60, 0.9);
+    color: white;
+    border-radius: 10px;
+    font-size: 16px;
+}
+QPushButton:hover {
+    background-color: rgba(80, 80, 80, 0.9);
+}
+QPushButton:pressed {
+    background-color: rgba(100, 100, 100, 0.9);
+}</string>
+   </property>
+   <property name="text">
+    <string>清屏</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="FloatToolWidget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>660</x>
+     <y>1000</y>
+     <width>600</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(40, 40, 40, 0.85);
+border-radius: 12px;</string>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <property name="spacing">
+     <number>15</number>
+    </property>
+    <property name="leftMargin">
+     <number>10</number>
+    </property>
+    <property name="topMargin">
+     <number>10</number>
+    </property>
+    <property name="rightMargin">
+     <number>10</number>
+    </property>
+    <property name="bottomMargin">
+     <number>10</number>
+    </property>
+    <item>
+     <widget class="QPushButton" name="btnPen">
+      <property name="minimumSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { background-color: rgba(60, 60, 60, 0.7); color: white; border-radius: 8px; text-align: center; } QPushButton:hover { background-color: rgba(80, 80, 80, 0.7); } QPushButton:pressed, QPushButton:checked { background-color: rgba(100, 100, 100, 0.7); }</string>
+      </property>
+      <property name="text">
+       <string>P
+画笔</string>
+      </property>
+      <property name="icon">
+       <iconset resource="resources.qrc">
+        <normaloff>:/icons/pen.png</normaloff>:/icons/pen.png</iconset>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+      <property name="autoExclusive">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btnLine">
+      <property name="minimumSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { background-color: rgba(60, 60, 60, 0.7); color: white; border-radius: 8px; text-align: center; } QPushButton:hover { background-color: rgba(80, 80, 80, 0.7); } QPushButton:pressed, QPushButton:checked { background-color: rgba(100, 100, 100, 0.7); }</string>
+      </property>
+      <property name="text">
+       <string>L
+直线</string>
+      </property>
+      <property name="icon">
+       <iconset resource="resources.qrc">
+        <normaloff>:/icons/arrow.png</normaloff>:/icons/arrow.png</iconset>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+      <property name="autoExclusive">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btnRect">
+      <property name="minimumSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { background-color: rgba(60, 60, 60, 0.7); color: white; border-radius: 8px; text-align: center; } QPushButton:hover { background-color: rgba(80, 80, 80, 0.7); } QPushButton:pressed, QPushButton:checked { background-color: rgba(100, 100, 100, 0.7); }</string>
+      </property>
+      <property name="text">
+       <string>R
+矩形</string>
+      </property>
+      <property name="icon">
+       <iconset resource="resources.qrc">
+        <normaloff>:/icons/correction.png</normaloff>:/icons/correction.png</iconset>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+      <property name="autoExclusive">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btnCircle">
+      <property name="minimumSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="icon">
+       <iconset resource="resources.qrc">
+        <normaloff>:/icons/settings.png</normaloff>:/icons/settings.png</iconset>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { background-color: rgba(60, 60, 60, 0.7); color: white; border-radius: 8px; text-align: center; } QPushButton:hover { background-color: rgba(80, 80, 80, 0.7); } QPushButton:pressed, QPushButton:checked { background-color: rgba(100, 100, 100, 0.7); }</string>
+      </property>
+      <property name="text">
+       <string>C
+圆形</string>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+      <property name="autoExclusive">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btnEllipse">
+      <property name="minimumSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="icon">
+       <iconset resource="resources.qrc">
+        <normaloff>:/icons/save.png</normaloff>:/icons/save.png</iconset>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { background-color: rgba(60, 60, 60, 0.7); color: white; border-radius: 8px; text-align: center; } QPushButton:hover { background-color: rgba(80, 80, 80, 0.7); } QPushButton:pressed, QPushButton:checked { background-color: rgba(100, 100, 100, 0.7); }</string>
+      </property>
+      <property name="text">
+       <string>O
+椭圆</string>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+      <property name="autoExclusive">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="Line" name="line">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(80, 80, 80, 0.5);</string>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="Line" name="line_2">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(80, 80, 80, 0.5);</string>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btnEraser">
+      <property name="minimumSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="icon">
+       <iconset resource="resources.qrc">
+        <normaloff>:/icons/eraser.png</normaloff>:/icons/eraser.png</iconset>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { background-color: rgba(60, 60, 60, 0.7); color: white; border-radius: 8px; text-align: center; } QPushButton:hover { background-color: rgba(80, 80, 80, 0.7); } QPushButton:pressed, QPushButton:checked { background-color: rgba(100, 100, 100, 0.7); }</string>
+      </property>
+      <property name="text">
+       <string>橡皮</string>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+      <property name="autoExclusive">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="Line" name="line_3">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(80, 80, 80, 0.5);</string>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btnPPTPrev">
+      <property name="minimumSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="icon">
+       <iconset resource="resources.qrc">
+        <normaloff>:/icons/minimize.png</normaloff>:/icons/minimize.png</iconset>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { background-color: rgba(60, 60, 60, 0.7); color: white; border-radius: 8px; } QPushButton:hover { background-color: rgba(80, 80, 80, 0.7); } QPushButton:pressed { background-color: rgba(100, 100, 100, 0.7); }</string>
+      </property>
+      <property name="text">
+       <string>上页</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btnPPTNext">
+      <property name="minimumSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="icon">
+       <iconset resource="resources.qrc">
+        <normaloff>:/icons/minimize.png</normaloff>:/icons/minimize.png</iconset>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { background-color: rgba(60, 60, 60, 0.7); color: white; border-radius: 8px; } QPushButton:hover { background-color: rgba(80, 80, 80, 0.7); } QPushButton:pressed { background-color: rgba(100, 100, 100, 0.7); }</string>
+      </property>
+      <property name="text">
+       <string>下页</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btnExit">
+      <property name="minimumSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="icon">
+       <iconset resource="resources.qrc">
+        <normaloff>:/icons/exit.png</normaloff>:/icons/exit.png</iconset>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { background-color: rgba(60, 60, 60, 0.7); color: white; border-radius: 8px; } QPushButton:hover { background-color: rgba(80, 80, 80, 0.7); } QPushButton:pressed { background-color: rgba(100, 100, 100, 0.7); }</string>
+      </property>
+      <property name="text">
+       <string>退出</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>
